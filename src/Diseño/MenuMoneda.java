@@ -23,6 +23,8 @@ import java.text.DecimalFormat;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
+import java.awt.Color;
+import java.awt.SystemColor;
 
 public class MenuMoneda extends JFrame {
 
@@ -61,11 +63,13 @@ public class MenuMoneda extends JFrame {
 		PanelMoneda.setLayout(null);
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(Color.DARK_GRAY);
 		panel.setBounds(0, 0, 751, 233);
 		PanelMoneda.add(panel);
 		panel.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Conversor de Divisas");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
 		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 25));
 		lblNewLabel.setBounds(271, 11, 236, 44);
 		panel.add(lblNewLabel);
@@ -87,24 +91,33 @@ public class MenuMoneda extends JFrame {
 		panel.add(comboBox_1);
 		
 		JLabel lblNewLabel_1 = new JLabel("Valor");
+		lblNewLabel_1.setForeground(new Color(255, 255, 255));
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 17));
 		lblNewLabel_1.setBounds(353, 79, 53, 19);
 		panel.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Desde Divisa");
-		lblNewLabel_2.setBounds(69, 79, 144, 22);
+		lblNewLabel_2.setFont(new Font("Yu Gothic Light", Font.BOLD, 16));
+		lblNewLabel_2.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2.setBounds(86, 82, 144, 22);
 		panel.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_2_1 = new JLabel("Hasta Divisa");
-		lblNewLabel_2_1.setBounds(549, 79, 144, 22);
+		lblNewLabel_2_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2_1.setFont(new Font("Yu Gothic Light", Font.BOLD, 16));
+		lblNewLabel_2_1.setBounds(568, 82, 144, 22);
 		panel.add(lblNewLabel_2_1);
 		
 		JButton btnConvertir = new JButton("Convertir");
-		btnConvertir.setBounds(320, 163, 89, 23);
+		btnConvertir.setForeground(new Color(255, 255, 255));
+		btnConvertir.setBackground(new Color(51, 153, 153));
+		btnConvertir.setBounds(338, 166, 89, 23);
 		btnConvertir.addActionListener(this::botonClick);
 		panel.add(btnConvertir);
 		
 		lblResultado = new JLabel("Resultado");
+		lblResultado.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblResultado.setForeground(new Color(255, 255, 255));
 		lblResultado.setBounds(524, 163, 188, 22);
 		panel.add(lblResultado);
 	}
